@@ -11,7 +11,7 @@ public class AverageWitholding {
         
         // Input with validation
         while (attempts < MAX_ATTEMPTS && !validInput) {
-            System.out.println("Enter your annual salary:");
+            System.out.println("Enter your weekly salary:");
             String input = scnr.next();
             
             try {
@@ -39,27 +39,23 @@ public class AverageWitholding {
             // Determine flat tax rate based on income bracket
             if (income < 500) {
                 taxRate = 0.10;
-                bracketDescription = "10%";
             } 
             else if (income < 1500) {
                 taxRate = 0.15;
-                bracketDescription = "15%";
             } 
             else if (income < 2500) {
                 taxRate = 0.20;
-                bracketDescription = "20%";
             } 
             else {
                 taxRate = 0.30;
-                bracketDescription = "30%";
             }
-            
-            double annualTax = income * taxRate;
-            double weeklyTax = annualTax / 52.0;
-            double averageTaxRate = taxRate;   // Since it's flat, average = marginal
+            double totalSalary = income * 52.0;
+            double weeklyTax = income * taxRate;
+            double annualTax = weeklyTax * 52.0;  
             
             // Output
-            System.out.printf("Tax rate applied: %s\n", bracketDescription);
+            System.out.printf("Annual Salary: $%.2f\n", totalSalary);
+            System.out.printf("Tax rate applied: %.2f%%\n", (taxRate * 100));
             System.out.printf("Total annual tax burden: $%.2f\n", annualTax);
             System.out.printf("Average weekly tax withholding: $%.2f\n", weeklyTax);
             
