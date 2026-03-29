@@ -31,7 +31,7 @@ public class AverageWitholdingMarginal {
         }
         
         if (validInput) {
-            System.out.printf("You entered $%.2f.%n", income);
+            System.out.printf("You entered $%.2f.\n", income);
             
             double bracket1Tax = 0.0;   // 10% bracket (0 - 499.99)
             double bracket2Tax = 0.0;   // 15% bracket (500 - 1499.99)
@@ -64,11 +64,11 @@ public class AverageWitholdingMarginal {
             }
             
             /* Test code for  taxable income per bracket
-            System.out.printf("Total taxable income = $%.2f%n", (bracket1Tax + bracket2Tax + bracket3Tax + bracket4Tax));
-            System.out.printf("Taxable income at 10%%: $%.2f%n", bracket1Tax);
-            System.out.printf("Taxable income at 15%%: $%.2f%n", bracket2Tax);
-            System.out.printf("Taxable income at 20%%: $%.2f%n", bracket3Tax);
-            System.out.printf("Taxable income at 30%%: $%.2f%n", bracket4Tax);
+            System.out.printf("Total taxable income = $%.2f\n", (bracket1Tax + bracket2Tax + bracket3Tax + bracket4Tax));
+            System.out.printf("Taxable income at 10%%: $%.2f\n", bracket1Tax);
+            System.out.printf("Taxable income at 15%%: $%.2f\n", bracket2Tax);
+            System.out.printf("Taxable income at 20%%: $%.2f\n", bracket3Tax);
+            System.out.printf("Taxable income at 30%%: $%.2f\n", bracket4Tax);
             */
             
             // Convert taxable income to actual tax per bracket
@@ -82,10 +82,10 @@ public class AverageWitholdingMarginal {
             double averageTaxRate = totalIncomeTax / income;
             double weeklyIncomeTax = totalIncomeTax / 52.0;
             
-            System.out.printf("Marginal tax rate: %d%%%n", marginalBracket);
-            System.out.printf("Average tax rate: %.2f%%%n", averageTaxRate * 100);
-            System.out.printf("Total annual tax burden: $%.2f%n", totalIncomeTax);
-            System.out.printf("Average weekly tax withholding: $%.2f%n", weeklyIncomeTax);
+            System.out.printf("Marginal tax rate: %d%%\n", marginalBracket);
+            System.out.printf("Average tax rate: %.2f%%\n", averageTaxRate * 100);
+            System.out.printf("Total annual tax burden: $%.2f\n", totalIncomeTax);
+            System.out.printf("Average weekly tax withholding: $%.2f\n", weeklyIncomeTax);
             
         } else {
             System.out.println("Too many invalid attempts. Exiting program.");

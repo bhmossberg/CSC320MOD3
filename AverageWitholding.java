@@ -31,7 +31,7 @@ public class AverageWitholding {
         }
         
         if (validInput) {
-            System.out.printf("You entered $%.2f.%n", income);
+            System.out.printf("You entered $%.2f.\n", income);
             
             double taxRate;
             String bracketDescription;
@@ -59,9 +59,9 @@ public class AverageWitholding {
             double averageTaxRate = taxRate;   // Since it's flat, average = marginal
             
             // Output
-            System.out.printf("Tax rate applied: %s%n", bracketDescription);
-            System.out.printf("Total annual tax burden: $%.2f%n", annualTax);
-            System.out.printf("Average weekly tax withholding: $%.2f%n", weeklyTax);
+            System.out.printf("Tax rate applied: %s\n", bracketDescription);
+            System.out.printf("Total annual tax burden: $%.2f\n", annualTax);
+            System.out.printf("Average weekly tax withholding: $%.2f\n", weeklyTax);
             
         } else {
             System.out.println("Too many invalid attempts. Exiting program.");
